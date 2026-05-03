@@ -42,7 +42,6 @@ const testimonials = [
 const Testimonials = () => {
   return (
     <div className="max-w-6xl mx-auto mt-24 px-4">
-      {/* Heading */}
       <div className="text-center mb-14">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
           What Our <span className="text-blue-600">Users Say</span>
@@ -52,7 +51,6 @@ const Testimonials = () => {
         </p>
       </div>
 
-      {/* Swiper */}
       <div className="pb-14">
         <Swiper
           modules={[Autoplay, Pagination]}
@@ -71,8 +69,6 @@ const Testimonials = () => {
           {testimonials.map((item, index) => (
             <SwiperSlide key={index}>
               <div className="h-full bg-white shadow-md hover:shadow-lg transition rounded-xl p-7 flex flex-col justify-between min-h-[260px]">
-                
-                {/* Stars */}
                 <div className="flex mb-3 text-yellow-400">
                   {Array.from({ length: item.rating }).map((_, i) => (
                     <FaStar key={i} />
@@ -93,11 +89,7 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* extra space between cards and dots handled by padding-bottom */}
       </div>
-
-      {/* Custom spacing for dots */}
       <style jsx>{`
         :global(.swiper-pagination) {
           margin-top: 25px;

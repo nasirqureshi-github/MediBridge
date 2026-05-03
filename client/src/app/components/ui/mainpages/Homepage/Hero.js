@@ -38,7 +38,7 @@ const Hero = () => {
           </div>
 
 {/* Features */}
-<div className="mt-10 flex flex-wrap gap-4">
+<div className="mt-10 flex flex-wrap gap-4 justify-center md:justify-start">
 
   {/* Verified Doctors */}
   <div className="bg-white/70 backdrop-blur-md shadow-md rounded-xl px-4 py-2 border border-gray-200 hover:shadow-lg transition">
@@ -90,7 +90,7 @@ const Hero = () => {
             alt="Doctors"
             width={600}
             height={600}
-            className="max-w-full h-auto object-contain"
+           className="w-full h-auto object-cover" 
           />
         </div>
       </div>

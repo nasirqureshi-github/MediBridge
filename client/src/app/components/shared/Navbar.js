@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -35,9 +36,17 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+  const pathname = usePathname();
+  useEffect(() => {
+  setOpen(false);
+   }, [pathname]);
+
+
+
   const links = [
     { name: "Home", href: "/" },
-    { name: "Find Doctors", href: "/find-doctors" },
+    { name: "Find Doctors", href: "/find-doctor" },
     { name: "About Us", href: "/about" },
     { name: "How It Works", href: "/how-it-works" },
     { name: "Blog", href: "/blog" },
@@ -60,14 +69,14 @@ const Navbar = () => {
             width={300}
             height={300}
             priority
-            style={{ width: "auto", height: "auto" }}
+           className="w-full h-auto" 
           />
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-6 text-gray-700 font-medium">
           {links.map((link) => (
-            <Link key={link.name} href={link.href} className="hover:text-blue-600">
+            <Link key={link.name} href={link.href} className="hover:text-blue-600" >
               {link.name}
             </Link>
           ))}
@@ -84,14 +93,14 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
+        <button className="md:hidden text-blue-600" onClick={() => setOpen(!open)}>
           {open ? <FiX size={24} /> : <FiMenu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden px-4 pb-4 bg-white">
+        <div className="md:hidden px-4 pb-4 bg-white text-black">
           {links.map((link) => (
             <Link key={link.name} href={link.href} className="block py-2">
               {link.name}

@@ -5,8 +5,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/f
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-blue-950 to-blue-900 text-white pt-12 mt-20">
-
+    <footer className="bg-linear-to-r from-blue-950 to-blue-900 text-white pt-12 mt-20">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-10 pb-10">
 
         {/* 1. Brand Section */}
@@ -68,10 +67,10 @@ const Footer = () => {
           <input
             type="email"
             placeholder="Enter your email"
-            className="w-full p-2 rounded-md text-black outline-none"
+            className="w-full p-2 rounded-md text-white outline-none border border-gray"
           />
 
-          <button className="w-full mt-3 bg-blue-600 hover:bg-blue-700 py-2 rounded-md font-semibold">
+          <button className="w-full mt-3 bg-blue-600 hover:bg-blue-700 py-2 rounded-md font-semibold ">
             Subscribe
           </button>
         </div>

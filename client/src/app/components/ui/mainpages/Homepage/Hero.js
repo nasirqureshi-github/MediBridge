@@ -4,7 +4,7 @@ import { FaCheckCircle, FaLock, FaClock } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-50 to-blue-100 pt-30 md:pt-16 w-full ">
+    <section className="bg-linear-to-r from-blue-50 to-blue-100 pt-30 md:pt-16 w-full ">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
 
         {/* LEFT CONTENT */}
